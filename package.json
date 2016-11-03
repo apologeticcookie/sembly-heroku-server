@@ -6,8 +6,7 @@
   "scripts": {
     "test": "mocha ./specs",
     "start": "node server/server.js production",
-    "populate": "node testData.js",
-    "build": ""
+    "populate": "node testData.js"
   },
   "repository": {
     "type": "git",
