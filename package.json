@@ -1,0 +1,45 @@
+{
+  "name": "sembly",
+  "version": "1.0.0",
+  "description": "Drop pins to coordinate events",
+  "main": "server/server.js",
+  "scripts": {
+    "postinstall": "npm run populate",
+    "test": "mocha ./specs",
+    "start": "node server/server.js production",
+    "populate": "node testData.js",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somnolentsoylent/somnolentsoylent.git"
+  },
+  "author": "Spencer Lopez, Carlos Flores, Omar Mohamed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somnolentsoylent/somnolentsoylent/issues"
+  },
+  "homepage": "https://github.com/somnolentsoylent/somnolentsoylent#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "material-ui": "^0.16.1",
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.4",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-tap-event-plugin": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-react": "^6.16.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6",
+    "supertest": "^2.0.1",
+    "webpack": "^1.13.2"
+  }
+}
