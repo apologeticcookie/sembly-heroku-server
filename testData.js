@@ -6,13 +6,15 @@ var eventModels = require('./server/models/eventModels');
 var friendModels = require('./server/models/friendModels');
 mongoose.Promise = require('bluebird');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/sembly');    
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/sembly');
 
 //DATA
+
 var users = [
   {
     firstName: 'Spenjamin',
     lastName: 'Franklin',
+    location: [-122.4066, 37.7786],
     email: 'spencer@test.com',
     password: 'test',
     photoUrl: 'http://www.cutestpaw.com/wp-content/uploads/2015/04/Doug-the-Pug.png'
@@ -20,6 +22,7 @@ var users = [
   {
     firstName: 'Omar',
     lastName: 'Mohamed',
+    location: [-122.1066, 37.7712],
     email: 'omar@test.com',
     password: 'test',
     photoUrl: 'https://avatars0.githubusercontent.com/u/16041716?v=3&s=400'
@@ -27,12 +30,14 @@ var users = [
   {
     firstName: 'Carl',
     lastName: 'Flores',
+    location: [-121.4266, 37.7386],
     email: 'carlos@test.com',
     password: 'test',
     photoUrl: 'https://avatars0.githubusercontent.com/u/18621668?v=3&s=400'
   },
   {
     firstName: 'Kanye',
+    location: [-122.4066, 37.7996],
     lastName: 'West',
     email: 'god@god.com',
     password: 'test',
@@ -79,7 +84,7 @@ var events = [
     tags:['concert', 'music'],
     image: 'http://www.ticketswest.com/media/1028/concert_Featured%20Event%20Tile.jpg'
   }
-  
+
 ];
 
 mongoose.connection.on('connected', () => {
