@@ -6,6 +6,15 @@ mongoose.Promise = bluebird;
 var app = express();
 
 var port = process.env.PORT || 3000;
+
+mongoose.connection.on('open', function (ref) {
+  console.log('Connected to mongo server.');
+});
+mongoose.connection.on('error', function (err) {
+  console.log('Could not connect to mongo server!');
+  console.log(err);
+});
+
 // connect to mongo database named "sembly"
 if (process.env.PRODUCTION === 'true') {
   mongoose.connect(process.env.MONGODB_URI.toString());
