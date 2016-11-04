@@ -121,6 +121,7 @@ mongoose.connection.on('connected', () => {
   })
   .then(success => {
     console.log('Database populated');
+    console.log('WTF');
     process.exit();
     if (!process.env.MONGODB_URI) {
       process.exit();
