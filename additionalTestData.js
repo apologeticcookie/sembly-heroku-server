@@ -17,7 +17,6 @@ var sampleUser =
   photoUrl: 'http://www.metalinjection.net/wp-content/uploads/2015/06/metal-horn-emoji.jpg'
 };
 
-
 mongoose.connection.on('connected', function() {
   User.remove({}).exec()
   .then(() => {
