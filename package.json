@@ -7,7 +7,6 @@
     "test": "mocha ./specs",
     "start": "node server/server.js production",
     "populate": "",
-    /*"populate": "node testData.js",*/
     "postinstall": "npm run populate"
   },
   "repository": {
