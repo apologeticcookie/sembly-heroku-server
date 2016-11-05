@@ -5,7 +5,8 @@ module.exports = (userObj) => {
 		'email': userObj.email
 	}, {
 		$set: {
-			location: userObj.location
+			location: userObj.location,
+			photoUrl: userObj.photoUrl
 		}
 	})
 	.then(searchResult => {
