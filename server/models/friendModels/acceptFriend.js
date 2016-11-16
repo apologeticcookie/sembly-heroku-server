@@ -2,6 +2,7 @@
 var User = require('../../schemas/userSchema')
 
 module.exports = (userId, friendId) => {
+	console.log('1 UserID ',userId,'Friends ID ',friendId);
 	return User.findOneAndUpdate({
 		'_id': userId
 	}, {
@@ -10,6 +11,7 @@ module.exports = (userId, friendId) => {
 		}
 	})
 	.then(success => {
+		console.log('2 UserID ',userId,'Friends ID ',friendId, ' ', success.friends);
 		return User.findOneAndUpdate({
 			'_id': userId
 		}, {
@@ -19,6 +21,7 @@ module.exports = (userId, friendId) => {
 		})
 	})
 	.then( success => {
+		console.log('3 UserID ',userId,'Friends ID ',friendId, ' ', success.friends);
 		return User.findOneAndUpdate({
 			'_id': friendId
 		}, {

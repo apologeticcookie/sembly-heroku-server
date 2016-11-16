@@ -14,11 +14,15 @@ var UserSchema = new Schema({
     type: String,
     required: true
   },
+  facebookId: {
+    type: String,
+    required: false
+  },
   location: {
     type: [Number],
     index: '2dsphere',
     required: true
-  },  
+  },
   email: {
     type: String,
     unique: true,
